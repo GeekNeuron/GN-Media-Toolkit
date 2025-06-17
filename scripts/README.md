@@ -57,7 +57,7 @@ This will present you with a central dashboard and a categorized menu, giving yo
 
 Here is a detailed breakdown of every tool included in the suite.
 
-### 🌌 Galactic Workflows
+### 🌌 Workflows
 
 > These are advanced meta-scripts that combine multiple tools into a single, intelligent workflow.
 
