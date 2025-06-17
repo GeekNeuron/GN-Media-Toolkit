@@ -1,0 +1,253 @@
+:root {
+    --font-family: 'Segoe UI', 'Roboto', sans-serif;
+    --transition-speed: 0.3s;
+}
+
+/* Light Theme Colors */
+.light-theme {
+    --bg-color: #f4f7f9;
+    --text-color: #333;
+    --header-bg: #ffffff;
+    --accent-color: #007bff;
+    --panel-bg: #e9ecef;
+    --button-bg-hover: #0056b3;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Theme Colors */
+.dark-theme {
+    --bg-color: #0d1117;
+    --text-color: #c9d1d9;
+    --header-bg: #161b22;
+    --accent-color: #3282b8;
+    --panel-bg: #1e2732;
+    --button-bg-hover: #1d4357;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Global Reset and No Click Highlight */
+* {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    line-height: 1.7;
+}
+
+header {
+    background-color: var(--header-bg);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-bottom: 1px solid var(--panel-bg);
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    user-select: none;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    color: var(--accent-color);
+}
+
+header p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+main {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+h2 {
+    position: relative; 
+    text-align: left;
+    margin: 4rem 0 2.5rem 0;
+    font-size: 2.2rem;
+    color: var(--text-color);
+    z-index: 1; 
+}
+
+h2::before {
+    content: ''; 
+    position: absolute;
+    left: 110px; 
+    top: 50%;
+    
+    width: 220px; 
+    height: 60px;
+
+    background-color: var(--accent-color);
+    opacity: 0.15; 
+    z-index: -1; 
+    
+    transform: translateY(-50%) rotate(-3deg);
+    
+    border-radius: 5px; 
+    transition: transform 0.3s ease-in-out;
+}
+
+h2:hover::before {
+    transform: translateY(-50%) rotate(2deg);
+}
+
+section#about p {
+    text-align: justify;
+    font-size: 1.1rem;
+}
+
+section#about a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section#about a:hover {
+    text-decoration: underline;
+}
+
+/* Accordion Styles */
+.accordion-button {
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 18px 25px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color var(--transition-speed);
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.accordion-button:hover, .accordion-button.active {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+.accordion-button::after {
+    content: '+';
+    font-size: 2rem;
+    font-weight: 300;
+    transition: transform var(--transition-speed) ease-in-out;
+}
+
+.accordion-button.active::after {
+    content: "-";
+    transform: rotate(180deg);
+}
+
+.panel {
+    padding: 0 25px;
+    background-color: var(--panel-bg);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid var(--accent-color);
+}
+
+.panel p {
+    opacity: 0.9;
+}
+
+.download-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+    transition: background-color var(--transition-speed);
+}
+
+.download-button:hover {
+    background-color: var(--button-bg-hover);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid var(--panel-bg);
+    user-select: none;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+.separator {
+    font-size: 2rem;
+    color: var(--text-color);
+    opacity: 0.3;
+}
+
+.support-text {
+    font-weight: bold;
+    opacity: 0.8;
+}
+
