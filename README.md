@@ -11,7 +11,7 @@
 
 ---
 
-## 📖 About This Project
+## About This Project
 
 The **GN Toolkit** is the result of an exploratory journey to challenge the maximum capabilities of command-line tools. What began as a simple need to merge files has evolved into a complete software suite with 16 distinct tools, capable of performing complex tasks including intelligent workflows, conditional processing, and full automation. This toolkit is designed for power users, media archivists, and anyone who seeks absolute control over their media files.
 
@@ -28,7 +28,7 @@ The **GN Toolkit** is the result of an exploratory journey to challenge the maxi
 
 ---
 
-## ⚙️ Prerequisites & Setup (Launch Checklist)
+## Prerequisites & Setup (Launch Checklist)
 
 To get the toolkit operational, please follow these three steps carefully.
 
