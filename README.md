@@ -1,7 +1,5 @@
 # The GN Media Toolkit
 
-![GN Toolkit Banner](https://i.imgur.com/uR1jWqR.png)
-
 <p align="center">
   <strong>An all-in-one command-line suite for managing, editing, and automating all your media needs.</strong>
 </p>
